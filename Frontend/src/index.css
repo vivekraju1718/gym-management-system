@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================= GLOBAL RESET ================= */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  background: var(--bg-main);
+}
+
+/* ================= GYM THEME ================= */
+
+:root {
+  --primary: #111827;
+  --secondary: #2563eb;
+  --accent: #22c55e;
+  --text-main: #111827;
+  --text-light: #6b7280;
+  --bg-main: #f9fafb;
+  --card-bg: #ffffff;
+}
+
+/* ================= MEMBERSHIP CARDS ================= */
+
+.plan-card {
+  background: white;
+  border-radius: 24px;
+  padding: 32px 28px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  border: 2px solid transparent;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.active-plan {
+  border: 2px solid #0f172a;
+  background: linear-gradient(180deg,#f8fafc,#eef2ff);
+  transform: scale(1.05);
+}
+
+.plan-card h3 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.price {
+  font-size: 38px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.subtext {
+  color: #475569;
+  margin: 10px 0 22px;
+}
+
+.save-badge {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  background: #0f172a;
+  color: white;
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.btn {
+  padding: 12px 26px;
+  border-radius: 999px;
+  border: 1px solid #0f172a;
+  background: transparent;
+  font-weight: 600;
+}
+
+.btn-active {
+  padding: 12px 26px;
+  border-radius: 999px;
+  background: #0f172a;
+  color: white;
+  font-weight: 700;
+}
+
+/* ================= COMMON UI ================= */
+
+.gym-heading {
+  @apply text-[var(--text-main)] font-bold tracking-wide;
+}
+
+.gym-input{
+  @apply w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm 
+         placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500
+         transition;
+}
+
+.gym-nav {
+  @apply text-white font-semibold tracking-wide hover:text-green-400 transition;
+}
+
+.gym-text {
+  @apply text-[var(--text-light)] text-sm;
+}
+
+.gym-price {
+  @apply text-green-600 font-bold text-lg;
+}
+
+.gym-btn {
+  @apply bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition;
+}
+
+.gym-card {
+  @apply bg-white shadow-lg rounded-xl p-4;
+}
+
+/* SINGLE clean section class */
+.gym-section {
+  @apply bg-[var(--bg-main)] py-10;
+}
